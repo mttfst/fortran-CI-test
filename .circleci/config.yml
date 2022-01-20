@@ -19,9 +19,8 @@ jobs:
     resource_class: medium
     steps:
       - checkout
+      - sudo apt-get update
+      - sudo apt-get install neofetch
       - run:
           name: "Testing"
-          command: echo "Hi"
-          - sudo apt-get update
-          - sudo apt-get install neofetch
-          - bash ci/test.sh
+          command: bash ci/test.sh
