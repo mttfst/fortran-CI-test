@@ -1,8 +1,13 @@
 # Fortran CircleCI configuration file
 
-dependencies:
-    pre:
-        - sudo apt-get update
-        - sudo apt-get install neofetch
+jobs:
+  build: # name of your job
+    machine: # executor type
+      image: ubuntu-2004:202010-01
+    resource_class: medium
+    steps:
+        pre:
+            - sudo apt-get update
+            - sudo apt-get install neofetch
 
-        - bash ci/test.sh
+            - bash ci/test.sh
