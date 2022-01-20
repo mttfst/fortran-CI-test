@@ -21,7 +21,8 @@ jobs:
       - checkout
       - run:
           name: "Testing"
-          command:
-              - sudo apt-get update
-              - sudo apt-get install neofetch
-              - bash ci/test.sh
+          command: |
+            sudo apt-get update
+            sudo apt-get install neofetch
+            ls
+            ./ci/test.sh
