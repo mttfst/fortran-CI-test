@@ -16,8 +16,12 @@ jobs:
   build:
     machine:
       image: ubuntu-2004:202010-01
+    resource_class: medium
     steps:
       - checkout
       - run:
           name: "Testing"
           command: echo "Hi"
+          - sudo apt-get update
+          - sudo apt-get install neofetch
+          - bash ci/test.sh
