@@ -1,8 +1,6 @@
 #!/bin/sh
 set -e
 
-neofetch
-
 echo
 echo 'ls'
 ls
@@ -14,6 +12,10 @@ ls /usr/local/bin
 echo
 echo 'gcc -v'
 gcc -v
+
+echo
+echo 'gfortran -v'
+gfortran -v
 
 echo
 echo 'gcc -dumpmachine'
